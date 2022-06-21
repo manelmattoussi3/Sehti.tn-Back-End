@@ -1,0 +1,5 @@
+package com.pfe.sehti.entity;
+
+public enum ExamenRadio {
+IRM,TEP,SCANNERX,ECHOGRAPHIE_DOPPLER,ECHOGRAPHIE_SCINTIGRAPHIE,TOMOGRAPHIE
+}
