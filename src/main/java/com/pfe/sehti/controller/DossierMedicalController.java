@@ -80,4 +80,8 @@ public class DossierMedicalController {
 	public DossierMedical findByDemande(@PathVariable("idDemande") String idDemande) {
 		return dosServ.findByDemande(idDemande);
 	}
+	@PutMapping("/ModifierDossier")
+	public void ModifierDossier(@RequestBody DossierMedical d) {
+		dosServ.ModifierDossier(d);
+	}
 }

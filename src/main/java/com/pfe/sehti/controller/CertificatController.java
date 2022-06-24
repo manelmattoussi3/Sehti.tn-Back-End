@@ -19,8 +19,8 @@ public class CertificatController {
 @Autowired
 ICertificatService certifServ;
 @PostMapping("/saveCertificat")
-public String saveCertificat(@RequestBody Certificat ce) {
-	return certifServ.saveCertificat(ce);
+public void saveCertificat(@RequestBody Certificat ce) {
+	 certifServ.saveCertificat(ce);
 }
 
 @GetMapping("/getCertifById/{idCertif}")

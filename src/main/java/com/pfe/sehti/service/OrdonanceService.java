@@ -1,5 +1,6 @@
 package com.pfe.sehti.service;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -7,22 +8,32 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.pfe.sehti.entity.EtatOrdonance;
+import com.pfe.sehti.entity.Medicament;
 import com.pfe.sehti.entity.Ordonance;
+import com.pfe.sehti.entity.Prescription;
+import com.pfe.sehti.repository.IMedicamentRepository;
 import com.pfe.sehti.repository.IOrdonanaceRepository;
+import com.pfe.sehti.repository.IPresecriptionRepository;
 
 @Service
 public class OrdonanceService implements IOrdonanceService{
 @Autowired
 IOrdonanaceRepository ordonrep;
+@Autowired
+IPresecriptionRepository presecriptionRep;
+@Autowired
+IMedicamentRepository medRep;
 	@Override
 	public List<Ordonance> ConsulterOrdonancesActives() {
 	
 		return ordonrep.ConsulterOrdonancesActives();
 	}
 	@Override
-	public String saveOrdonance(Ordonance o) {
+	public void saveOrdonance(Ordonance o) {
+
+		
 		ordonrep.save(o);
-		return "ordonanace est ajouté avec succé";
+		
 	}
 	@Override
 	public String NouveauteOrdonance(String idOrdonance) {

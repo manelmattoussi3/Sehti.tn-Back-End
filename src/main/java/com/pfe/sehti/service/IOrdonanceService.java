@@ -7,7 +7,7 @@ import com.pfe.sehti.entity.Ordonance;
 
 public interface IOrdonanceService {
 	public List<Ordonance>ConsulterOrdonancesActives();
-	public String saveOrdonance(Ordonance o);
+	public void saveOrdonance(Ordonance o);
 	public String NouveauteOrdonance(String idOrdonance);
 	public List<Ordonance> AccederNouveauxOrdonances();
 	public List<Ordonance> findAllOrdonances();

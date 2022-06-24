@@ -22,12 +22,12 @@ public class Ordonance {
 	private String idOrdonance;
 	@JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "dd-MM-yyyy",timezone = "GMT")
 	private Date dateOrdonance;
-	private int numOrdonance;
+
 	private EtatOrdonance etat;
 	private boolean nouveaute;
 	
 	@DBRef()
-	private List<Prescription>prescriptions;
-	private Consultation consultation;
+	private List<Medicament>medicaments;
+
 
 }

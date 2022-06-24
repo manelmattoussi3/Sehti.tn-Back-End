@@ -19,5 +19,5 @@ private String idMedicament;
 private String name;
 private ClasseMedical classe;
 @DBRef()
-private List<Prescription>prescriptions;
+private Prescription prescription;
 }

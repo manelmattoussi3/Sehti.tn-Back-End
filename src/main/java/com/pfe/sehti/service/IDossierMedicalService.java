@@ -23,5 +23,6 @@ public interface IDossierMedicalService {
 	public List<DossierMedical> findAllDossierWithoutDemandes();
 	public List<DossierMedical> findAllDossierWithDemandes();
 	public DossierMedical findByDemande(String idDemande);
+	public void ModifierDossier(DossierMedical d);
 	
 }

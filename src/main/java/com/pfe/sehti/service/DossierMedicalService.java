@@ -151,6 +151,15 @@ public DossierMedical findByDemande(String idDemande) {
 	return de.getDossierMedical();
 }
 
+@Override
+public void ModifierDossier(DossierMedical d) {
+
+
+	
+dosrep.save(d);
+	
+}
+
 
 
 }

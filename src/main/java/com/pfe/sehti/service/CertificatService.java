@@ -13,9 +13,9 @@ public class CertificatService implements ICertificatService{
 @Autowired
 ICertificatRepository certifRepo;
 	@Override
-	public String saveCertificat(Certificat ce) {
+	public void saveCertificat(Certificat ce) {
 		certifRepo.save(ce);
-		return "certificat est ajoutée avec succé";
+		
 	}
 	@Override
 	public Certificat getCertifById(String idCertif) {

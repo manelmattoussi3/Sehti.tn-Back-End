@@ -24,8 +24,7 @@ public class Prescription {
 	private EtatMedicament etat;
 	@DBRef()
 	private Medicament medicament;
-	@DBRef()
-	private Ordonance ordonance;
+
 	
 
 }

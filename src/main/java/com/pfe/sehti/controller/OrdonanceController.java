@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.pfe.sehti.entity.EtatOrdonance;
 import com.pfe.sehti.entity.Ordonance;
 import com.pfe.sehti.service.IOrdonanceService;
-
+@CrossOrigin(origins = "*")
 @RestController
 public class OrdonanceController {
 @Autowired
@@ -24,8 +24,8 @@ public List<Ordonance>ConsulterOrdonancesActives(){
 	return ordonserv.ConsulterOrdonancesActives();
 }
 @PostMapping("/saveOrdonance")
-public String saveOrdonance(@RequestBody Ordonance o) {
-	return ordonserv.saveOrdonance(o);
+public void saveOrdonance(@RequestBody Ordonance o) {
+	 ordonserv.saveOrdonance(o);
 }
 @PutMapping("/NouveauteOrdonance/{idOrdon}")
 public String NouveauteOrdonance(@PathVariable ("idOrdon")String idOrdonance) {

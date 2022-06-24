@@ -13,6 +13,7 @@ import com.pfe.sehti.entity.Medicament;
 import com.pfe.sehti.service.IMedicamentService;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class MedicamentController {
 @Autowired
 IMedicamentService medserv;
@@ -20,7 +21,7 @@ IMedicamentService medserv;
 public String addMedicament(@RequestBody Medicament m) {
 	return medserv.addMedicament(m);
 }
-@CrossOrigin(origins = "http://localhost:4200")
+
 @GetMapping("/findAllMedicament")
 public List<Medicament> findAllMedicament() {
 	return medserv.findAllMedicament();
